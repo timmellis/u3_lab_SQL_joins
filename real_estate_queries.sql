@@ -8,10 +8,10 @@ SELECT name,age,gender FROM tenants LIMIT 10;
 SELECT * FROM tenants WHERE age>65;
 
 --Retrieve all info on all tenants in apartment with id 20
-SELECT * FROM tenants JOIN apartments ON tenants.apartment_id = apartments.id WHERE apartments.id=20;
+SELECT * FROM tenants WHERE apartments_id=20;
 
 --Retrieve all info on all tenants in apartment with ids 20 or 21
-SELECT * FROM tenants JOIN apartments ON tenants.apartment_id = apartments.id WHERE apartments.id=20 OR apartments.id=21;
+SELECT * FROM tenants WHERE apartments_id=20 OR apartments_id=21;
 
 --Retrieve the names of all doormen and the address where they work
  SELECT doormen.name, buildings.address FROM doormen JOIN buildings ON doormen.building_id = buildings.id;
